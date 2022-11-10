@@ -26,3 +26,5 @@ const foodIngredients = (ingredient) => {
 //   в первую переменную foodListEl добавляем распыленный метод rest 
 foodListEl.append(...foodIngredients(ingredients));
 console.log(foodListEl);
+
+

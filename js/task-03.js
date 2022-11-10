@@ -13,3 +13,15 @@ const images = [
   },
 ];
 
+const createGalleryItem = ({ url, alt }) =>
+  `<li><img src="${url}" alt="${alt}" width = 200 height = 150></li>`;
+const galleryMarkup = images.reduce(
+  (acc, item) => acc + createGalleryItem(item),
+  ""
+);
+
+const ulRef = document.querySelector('.gallery');
+ulRef.insertAdjacentHTML("afterbegin", galleryMarkup);
+ulRef.setAttribute("style", "list-style-type:none; display: flex; gap:8px; justify-content:center;");
+console.log(ulRef);
+const galery = ({url, alt}) => `<li><img src="${url}" alt= "${alt}" width = 200 height = 150></li>`;
